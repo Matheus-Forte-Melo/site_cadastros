@@ -1,0 +1,35 @@
+div.user img {
+    width: 10em;
+}
+
+div.user div {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    margin: 0px; 
+}
+
+div p {
+    width: 55%;
+    font-size: 1.5em;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+}
+
+div form {
+    margin-top: 0;
+    margin-left: auto;
+}
+
+input[type="button"] {
+    margin-top: 40px;
+    height: 50%;
+    width: 200px;
+    padding: 15px 12px;
+    border-radius: 4px;
+    font-size: 1.5em;
+}
+

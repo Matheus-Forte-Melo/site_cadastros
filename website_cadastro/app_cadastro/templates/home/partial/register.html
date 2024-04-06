@@ -1,0 +1,21 @@
+{% extends "../global/index.html" %}
+
+{% block title %}Registrar{% endblock %}
+
+{% block content%}
+    {% for _ in 'xxxxxxxxxxxxxxxxxxx' %}
+    <main>
+        <div class="user">
+            <img src="../../../static/home/img/user-svg.svg" alt="icone do usuario">
+            <div> <!--Não sei como isso vai funcionar na prática, mas vamos ir tocando a bola né, qualquer coisa altera depois-->
+                <p>Matheus Forte de Melo - 15/02/2006<br> Deseja trabalhar em "Estados Unidos"</p>
+                <form action="post">
+                    <input id="editar" type="button" value="Editar">
+                    <input id="deletar" type="button" value="Deletar">
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+    </main>
+{% endblock  %}
+

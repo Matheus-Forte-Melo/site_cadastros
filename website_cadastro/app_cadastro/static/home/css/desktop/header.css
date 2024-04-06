@@ -1,0 +1,33 @@
+header img{
+    padding: 60px 0px 0px 0px;
+    width: 650px;
+    margin: 0;
+    margin-right: 15vw;
+    float: right;
+}
+
+header form {
+    background-color: rgb(238, 242, 245);
+    padding: 10px;
+    border-radius: 5px;
+    width: 35vw;
+}
+
+/* Coisas que podiam ter sido evitados se eu tivesse um conhecimento maior em flexbox (preciso estudar isso e dar uma revisada em responsiviade no geral) ----- flexbox row reverse eh interessante - justify content , allign-items*/
+@media screen and (max-width: 1700px) {
+    header img {
+        width: 600px;
+        margin-right: 9vw;
+    }
+
+    header form {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header img {
+    
+        margin-right: 5vw;
+    }
+}

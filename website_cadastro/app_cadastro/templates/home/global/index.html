@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configs de Estilo Mobile-->
+    <link rel="stylesheet" href=" {% static "home/css/mobile/header.css" %} ">
+    <link rel="stylesheet" href="{% static "home/css/mobile/main.css" %}">
+    <link rel="stylesheet" href="{% static "home/css/mobile/footer.css" %}">
+    <!-- Configs de Estilo Desktop-->
+    <link rel="stylesheet" href="{% static "home/css/desktop/header.css" %}" media="screen and (min-width: 1150px)">
+    <link rel="stylesheet" href="{% static "home/css/desktop/main.css" %}" media="screen and (min-width: 1150px)">
+    <link rel="stylesheet" href="{% static "home/css/desktop/footer.css" %}" media="screen and (min-width: 1150px)">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    
+    {% include "../partial/header.html" %}
+    {% block content %} {% endblock %}
+    {% include "../partial/footer.html" %}
+
+</body>
+</html>
