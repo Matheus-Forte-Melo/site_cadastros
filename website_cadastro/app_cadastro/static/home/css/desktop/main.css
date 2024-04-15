@@ -22,6 +22,7 @@ div p {
 div form {
     margin-top: 0;
     margin-left: auto;
+    transform: translateY(-15%);
 }
 
 input[type="button"] {
