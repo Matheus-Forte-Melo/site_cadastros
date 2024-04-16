@@ -1,0 +1,77 @@
+{% load static %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'home/css/mobile/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/desktop/footer.css' %}"
+    media="screen and (min-width: 1150px)">
+    <style>
+        @font-face {
+            font-family: "Aperture";
+            src: url(../../../static/home/fonts/JosefinSans-Italic-VariableFont_wght.ttf) format('truetype');
+        }
+
+        body {
+            font-family: "Aperture";
+            font-size: 1.150em;
+        }
+
+        div {
+            width: 60%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: block;
+            margin: auto;
+            width: 60%;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d3d3d3;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center;">Mostrando {{quant}} cadastro(s).</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="Insira um nome">
+            <input type="submit" value="Pesquisar">
+        </form>
+        {% for pessoa in pessoas %}
+        <div>
+            <strong>
+                <p>Nome: {{pessoa.nome}}</p>
+            </strong>
+            <p>Contato: {{pessoa.email}}</p>
+            <p>Nascimento: {{pessoa.nascimento}}</p>
+            <p>Deseja trabalhar: {{pessoa.pais}}</p>
+            <p>Ultima atualização no cadastro: {{pessoa.criado}}</p>
+        </div>
+        {% endfor %}
+    </main>
+</body>
+
+{% endblock %}
+
+{% include 'home/partial/footer.html' %}

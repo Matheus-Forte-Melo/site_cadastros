@@ -1,0 +1,35 @@
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="nome">
+        Nome Completo <input type="text" name="nome" id="nome" max="125">
+    </label>
+
+    <label for="email">
+        Email <input type="text" name="email" id="email" max="155">
+    </label>
+
+    <label for="nascimento">
+        Nascimento<input type="date" name="nascimento" id="nascimento" required>
+    </label>
+
+    <label for="país">
+        Pais Desejado<select name="país" id="país" required>
+            <option value="" disabled selected >---Selecione---</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Canadá">Canadá</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="França">França</option>
+            <option value="Alemanha">Alemanha</option>
+            <option value="Japão">Japão</option>
+            <option value="China">China</option>
+            <option value="Índia">Índia</option>
+            <option value="Austrália">Austrália</option>
+        </select>
+    </label>
+
+    <input type="submit" value="Cadastrar">
+</form>
+
+{% endblock %}

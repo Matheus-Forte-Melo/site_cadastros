@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar</title>
+    <style>
+        @font-face {
+            font-family: "Aperture";
+            src: url(../../../static/home/fonts/JosefinSans-Italic-VariableFont_wght.ttf) format('truetype');
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: "Aperture";
+        }
+
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            padding: 30px;
+            background-color: rgb(238, 242, 245);
+        }
+        
+        input[type="button"], input[type="submit"] {
+        background-color: #020302;
+        color: white;
+        padding: 1px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+        
+
+    </style>
+</head>
+<body>
+   
+    <div>
+        <h1>Você tem certeza?</h1>
+        <p>
+            Você está deletando: {{pessoa.nome|truncatechars:50}}
+            <br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Deletar">
+                <a href="/"><input type="button" value="Voltar"></a>
+            </form>
+            
+        </p>
+    </div>
+
+    
+</body>
+</html>

@@ -6,26 +6,26 @@ div.user div {
     display: flex;
     width: 100%;
     padding: 0px;
-    margin: 0px; 
+    margin: 0px;
 }
 
 div p {
-    width: 55%;
-    font-size: 1.5em;
-
+    width: 40%;
+    margin-left: auto;
+    font-size: 1.4em;
     display: flex;
-    justify-content: right;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    line-height: 1.150em;
 }
 
 div form {
     margin-top: 0;
     margin-left: auto;
-    transform: translateY(-15%);
 }
 
 input[type="button"] {
+    transform: translateY(-25%); /* Gambiarra do karalho vei, acho q éh por isso q as pessoas usam bootstrap. Meio que eu sei como consertar mas eu tenho tantas outras prioridades agora que eu só vou tacar isso aqui e fodase */
     margin-top: 40px;
     height: 50%;
     width: 200px;

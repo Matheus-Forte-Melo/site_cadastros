@@ -1,31 +1,8 @@
 
 <header>
     <img src="../../../static/home/img/Logo-aperture-p.png" alt="Logo da Aperture">
-    <form action="" method="POST">
-        {% csrf_token %}
-        <label for="nome">
-            Nome Completo <input type="text" name="nome" id="nome">
-        </label>
+    
+    {% include 'home/partial/form.html' %}
+    <a style="color: black;" href="{% url 'detalhado'%}"> ->Visão detalhada. Atualmente mostrando ultimos dez registros.</a>
 
-        <label for="nascimento">
-            Nascimento<input type="date" name="nascimento" id="nascimento">
-        </label>
-
-        <label for="país">
-            Pais Desejado<select name="país" id="país">
-                <option value="" disabled selected >---Selecione---</option>
-                <option value="estados_unidos">Estados Unidos</option>
-                <option value="canada">Canadá</option>
-                <option value="reino_unido">Reino Unido</option>
-                <option value="franca">França</option>
-                <option value="alemanha">Alemanha</option>
-                <option value="japao">Japão</option>
-                <option value="china">China</option>
-                <option value="india">Índia</option>
-                <option value="australia">Austrália</option>
-            </select>
-        </label>
-
-        <input type="submit" value="Cadastrar">
-    </form>
 </header>

@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'home/css/mobile/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/desktop/footer.css' %}"
+    media="screen and (min-width: 1150px)">
+    <link rel="stylesheet" href="{% static 'home/css/mobile/header.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/desktop/header.css' %}"
+    media="screen and (min-width: 1150px)">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizando</title>
+    <style>
+        
+        form {
+            width: 95%;
+        }
+
+        div {
+            padding: 30px;
+            background-color: rgb(238, 242, 245);
+            width: 40vw;
+            margin: auto;
+        }
+
+        input[type="submit"] {
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="nome">
+                Nome Completo <input type="text" name="nome" id="nome" value="{{pessoa.nome}}">
+            </label>
+        
+            <label for="email">
+                Email <input type="text" name="email" id="email" value="{{pessoa.email}}">
+            </label>
+
+            <label for="nascimento">
+                Nascimento<input type="date" name="nascimento" id="nascimento" value="{{pessoa.nascimento|date:'Y-m-d'}}" required >
+            </label>
+        
+            <label for="país">
+                Pais Desejado
+                <select name="país" id="país" required>
+                    <option selected value="{{ pessoa.pais }}">
+                        {{pessoa.pais}}
+                    </option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="França">França</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Japão">Japão</option>
+                    <option value="China">China</option>
+                    <option value="Índia">Índia</option>
+                    <option value="Austrália">Austrália</option>
+                </select>
+                
+            <input type="submit" value="Atualizar">
+        </form>
+    </div>
+
+    {% include 'home/partial/footer.html' %}
+    
+</body>
+</html>
+
+

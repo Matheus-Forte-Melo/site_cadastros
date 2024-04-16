@@ -3,19 +3,22 @@
 {% block title %}Registrar{% endblock %}
 
 {% block content%}
-    {% for _ in 'xxxxxxxxxxxxxxxxxxx' %}
+    
     <main>
+        {% for pessoa in pessoas %}
         <div class="user">
             <img src="../../../static/home/img/user-svg.svg" alt="icone do usuario">
-            <div> <!--Não sei como isso vai funcionar na prática, mas vamos ir tocando a bola né, qualquer coisa altera depois-->
-                <p>Matheus Forte de Melo - 15/02/2006<br> Deseja trabalhar em "Estados Unidos"</p>
-                <form action="post">
-                    <input id="editar" type="button" value="Editar">
-                    <input id="deletar" type="button" value="Deletar">
+            
+            <div>
+                <p>{{pessoa.nome|truncatechars:25}} - Nascido(a) em  {{pessoa.nascimento|date:"d/m/Y"}} <!--Formataço poggers--> 
+                <br> Contato: {{pessoa.email|truncatechars:55}} <br> Deseja trabalhar em "{{pessoa.pais}}" </p>
+                <form action="" method="POST"> <!-- Se pa tem q ser dois form diferente? ou sera que da fazer uma condicional pelo id-->
+                    <a href="{% url 'atualizar' pessoa.id %}"><input id="editar" type="button" value="Editar"></a>
+                    <a href="{% url 'deletar' pessoa.id %}"><input id="deletar" type="button" value="Deletar"></a> <!--Dá-->
                 </form>
             </div>
         </div>
-    {% endfor %}
+        {% endfor %}
     </main>
 {% endblock  %}
 
