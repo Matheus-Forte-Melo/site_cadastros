@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------------
 Olá,
 
-O arquivo backup.sqk está disposto, caso queira importar o banco totalmente configurado diretamente no MySQL. Se você estiver usando configurações padrão no Django, talvez seja necessário ajustar as configurações do banco de dados em "settings" para corresponder à sua conexão. Se houver algum problema de conexão, verifique essa parte.
+O arquivo backup.sql está disposto dentro da pasta principal do projeto, caso queira importar o banco totalmente configurado diretamente no MySQL. Se você estiver usando configurações padrão no Django, talvez seja necessário ajustar as configurações do banco de dados em "settings" para corresponder à sua conexão. Se houver algum problema de conexão, verifique essa parte.
 
 Para importar, basta seguir estes passos:
 
