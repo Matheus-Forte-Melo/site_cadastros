@@ -12,10 +12,15 @@ O arquivo backup.sql está disposto dentro da pasta principal do projeto, caso q
 
 Para importar, basta seguir estes passos:
 
+
 Abra o MySQL e vá para "Server" > "Import Data".
+
 Selecione o arquivo backup.sql.
+
 Certifique-se de marcar a opção "self-contained file" durante a importação.
+
 Verifique se o nome do banco de dados no Django corresponde ao nome do banco que está sendo importado.
+
 ------------------------------------------------------------------------------------------------------
 
 Se, por algum motivo, o arquivo não funcionar, você pode criar um banco de dados, fazer dele conexão no Django, realizar as migrações e aplicar as migrações dentro do próprio django. Depois disso, insira manualmente os seguintes valores no MySQL:
