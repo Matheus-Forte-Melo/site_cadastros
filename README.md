@@ -1,6 +1,10 @@
 # site_cadastros
  Site que permite cadastros (CRUD) e tals. Desenvolvido para a situação de aprendizagem 5 do curso de ADS do SENAI. Se você é o professor, leia o README que está dentro da pasta de entrega.
 
+     >> cd website_cadastro
+     >> .venv/Scripts/activate (O método para ativar o ambiente virtual pode ser diferente dependendo do sistema!)
+     >> python manage.py runserver
+
 ----------------------------------------------------------------------------
 Olá,
 
