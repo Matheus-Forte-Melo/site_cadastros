@@ -23,6 +23,12 @@ Verifique se o nome do banco de dados no Django corresponde ao nome do banco que
 
 ------------------------------------------------------------------------------------------------------
 
+![alt_text](https://i.imgur.com/BNYywo8.png)
+![alt_text](https://i.imgur.com/Z3Yltyz.png)
+![alt_text](https://i.imgur.com/vXHxKrD.png)
+
+------------------------------------------------------------------------------------------------------
+
 Se, por algum motivo, o arquivo não funcionar, você pode criar um banco de dados, fazer dele conexão no Django, realizar as migrações e aplicar as migrações dentro do próprio django. Depois disso, insira manualmente os seguintes valores no MySQL:
 
     INSERT INTO app_cadastro_pessoa (nome, email, nascimento, pais)
